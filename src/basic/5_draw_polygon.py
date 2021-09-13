@@ -5,12 +5,12 @@ pygame.init()
 
 WIDTH, HEIGHT = 800, 600
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption('Draw a rect without fill')
+pygame.display.set_caption('Draw polygon')
 
-rect_to_draw = pygame.Rect((WIDTH // 2) - 32, (HEIGHT // 2) - 32, 64, 64)
-# line width to rect rectangle
-line_width = 1
-color_rect = (255, 255, 255)
+# Point to draw the polygon
+polygon_points = [(50, 50), (250, 50), (150, 150)]
+polygon_color = (255, 255, 255)
+
 
 def main():
 	run = True
@@ -18,7 +18,7 @@ def main():
 		for event in pygame.event.get():
 			if event.type == pygame.QUIT:
 				run = False
-		pygame.draw.rect(screen, color_rect, rect_to_draw, line_width)
+		pygame.draw.polygon(screen, polygon_color, polygon_points)
 		pygame.display.update()
 	sys.exit()
 
