@@ -24,7 +24,9 @@ def main():
 		for event in pygame.event.get():
 			if event.type == pygame.QUIT:
 				run = False
+				
 		key = pygame.key.get_pressed()
+		
 		if key[pygame.K_LEFT]:
 			player_rect.x -= speed
 		if key[pygame.K_RIGHT]:
