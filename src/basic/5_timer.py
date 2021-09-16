@@ -5,23 +5,20 @@ pygame.init()
 
 WIDTH, HEIGHT = 800, 600
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption('Draw line')
+pygame.display.set_caption('Timer')
 
-line_color = (255, 255, 255)
-line_width = 1
-
-line_start_pos = (0, 0)
-line_end_post = (WIDTH // 2, HEIGHT // 2)
+clock = pygame.time.Clock()
+FPS = 60
 
 
 def main():
 	run = True
 	while run:
+		clock.tick(FPS)
+		print(clock.get_fps())
 		for event in pygame.event.get():
 			if event.type == pygame.QUIT:
 				run = False
-		pygame.draw.line(screen, line_color, line_start_pos, line_end_post, line_width)
-		pygame.display.update()
 	sys.exit()
 
 
