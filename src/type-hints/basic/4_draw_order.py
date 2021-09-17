@@ -1,33 +1,35 @@
+from typing import List
 import pygame, sys
 from pygame.locals import *
 
 pygame.init()
 
-WIDTH, HEIGHT = 800, 600
-screen = pygame.display.set_mode((WIDTH, HEIGHT))
+WIDTH : int = 800
+HEIGHT : int = 600
+screen : pygame.Surface = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption('Draw order')
 
-rect_1 = pygame.Rect(64, 64, 64, 64)
-white_color = (255, 255, 255)
+rect_1 : pygame.Rect = pygame.Rect(64, 64, 64, 64)
+white_color : List = (255, 255, 255)
 
-rect_2 = pygame.Rect(96, 64, 64, 64)
-purple_color = (179, 103, 155)
+rect_2 : pygame.Rect= pygame.Rect(96, 64, 64, 64)
+purple_color : List = (179, 103, 155)
 
 # If it's true calls the draw_order_2
-draw_1 = False
+draw_1 : bool = False
 
-def draw_order_1():
+def draw_order_1() -> None:
 	pygame.draw.rect(screen, white_color, rect_1)
 	pygame.draw.rect(screen, purple_color, rect_2)
 
 
-def draw_order_2():
+def draw_order_2() -> None:
 	pygame.draw.rect(screen, purple_color, rect_2)
 	pygame.draw.rect(screen, white_color, rect_1)
 
 
-def main():
-	run = True
+def main() -> None:
+	run : bool = True
 	global draw_1
 	while run:
 		for event in pygame.event.get():
