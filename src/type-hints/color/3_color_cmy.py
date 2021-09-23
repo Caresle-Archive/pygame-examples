@@ -2,17 +2,17 @@ import pygame, sys
 from pygame.locals import *
 pygame.init()
 
-WIDTH : int = 800
+WIDHT : int = 800
 HEIGHT : int = 600
-screen : pygame.Surface = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption('Color with hsl values')
+screen : pygame.Surface = pygame.display.set_mode((WIDHT, HEIGHT))
+pygame.display.set_caption('Color with cmy values')
 
 background_color : pygame.Color = pygame.Color(0)
-background_color.hsla = (215, 69, 49, 100)
+background_color.cmy = (.85, .57, .17)
 
 
 def main() -> None:
-	run : bool = True
+	run = True
 	while run:
 		for event in pygame.event.get():
 			if event.type == pygame.QUIT:
