@@ -16,11 +16,14 @@ purple_color = (179, 103, 155)
 # If it's true calls the draw_order_2
 draw_1 = False
 
+
+# Draw the white rectangle first and then the purple
 def draw_order_1():
 	pygame.draw.rect(screen, white_color, rect_1)
 	pygame.draw.rect(screen, purple_color, rect_2)
 
 
+# Draw the purple rectangle first and then the white
 def draw_order_2():
 	pygame.draw.rect(screen, purple_color, rect_2)
 	pygame.draw.rect(screen, white_color, rect_1)
@@ -33,6 +36,7 @@ def main():
 		for event in pygame.event.get():
 			if event.type == pygame.QUIT:
 				run = False
+			# if a key is pressed change the draw orden
 			if event.type == pygame.KEYDOWN:
 				if event.key == pygame.K_SPACE:
 					draw_1 = not draw_1

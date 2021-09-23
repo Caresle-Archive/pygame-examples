@@ -17,8 +17,10 @@ def main():
 		for event in pygame.event.get():
 			if event.type == pygame.QUIT:
 				run = False
+		# We get the buttons of mouse pressed
 		mouse = pygame.mouse.get_pressed()
 		
+		# If left click is pressed create a rect
 		if mouse[0]:
 			pos = pygame.mouse.get_pos()
 			click_rect.x = pos[0] - (click_rect.width // 2)
