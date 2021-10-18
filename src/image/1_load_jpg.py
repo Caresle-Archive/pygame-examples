@@ -5,9 +5,12 @@ pygame.init()
 
 WIDTH, HEIGHT = 800, 600
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
-pygame.display.set_caption('Blits image')
-img_url = os.path.join(os.getcwd(), os.path.abspath('src/assets/cube.png'))
-img = pygame.image.load(img_url).convert_alpha()
+pygame.display.set_caption('Load jpg image')
+
+img_abspath = os.path.abspath('src/assets/image.jpg')
+img_path = os.path.join(os.getcwd(), img_abspath)
+img = pygame.image.load(img_path).convert()
+
 
 def main():
 	run = True
