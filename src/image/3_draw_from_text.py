@@ -27,19 +27,19 @@ def load_text(path):
 
 def draw_map(path, screen):
 	grid_map = load_text(path)
-	start_pos = [0, 0]
+	position = [0, 0]
 	for row in grid_map:
 		for char in row:
 			if char == '0':
-				screen.blit(floor_img, start_pos)
+				screen.blit(floor_img, position)
 			if char == '1':
-				screen.blit(floor2_img, start_pos)
+				screen.blit(floor2_img, position)
 			if char == '2':
-				screen.blit(floor3_img, start_pos)
-			start_pos[0] += 16
+				screen.blit(floor3_img, position)
+			position[0] += 16
 			
-		start_pos[0] = 0
-		start_pos[1] += 16
+		position[0] = 0
+		position[1] += 16
 
 
 def main():
