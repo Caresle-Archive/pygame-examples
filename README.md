@@ -2,8 +2,6 @@
 
 A collection of pygame examples using the differents parts of the pygame module.
 
-If you want a mini-tutorial about pygame check [The Book section](./book/README.md)
-
 **Run the examples in the root folder**
 
 ```bash
