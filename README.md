@@ -48,3 +48,6 @@ python3 src/basic/1_window.py
 # Windows
 python src\basic\1_window.py
 ```
+
+## Credits
+Font - [Kenney](https://www.kenney.nl)
