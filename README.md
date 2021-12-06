@@ -6,7 +6,7 @@ Folders description
 
 | Name  | Description                                                                          |
 |-------|--------------------------------------------------------------------------------------|
-| Basic | General sttuf, things like "how to move a player", "how to change the window's name" |
+| Basic | General stuff, things like "how to move a player", "how to change the window's name" |
 | Color | Examples of the pygame.Color usage, things like use rgb, hsv.                        |
 | Draw  | Examples of the pygame.draw, things like how to draw a line, fill circle.            |
 | Font  | Examples about fonts, load a ttf at the moment only.                                 |
