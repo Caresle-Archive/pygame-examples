@@ -2,6 +2,22 @@
 
 A collection of pygame examples using the differents parts of the pygame module.
 
+Folders description
+
+| Name  | Description                                                                          |
+|-------|--------------------------------------------------------------------------------------|
+| Basic | General sttuf, things like "how to move a player", "how to change the window's name" |
+| Color | Examples of the pygame.Color usage, things like use rgb, hsv.                        |
+| Draw  | Examples of the pygame.draw, things like how to draw a line, fill circle.            |
+| Font  | Examples about fonts, load a ttf at the moment only.                                 |
+| Image | Examples about pygame.image, like load a png, jpg.                                   |
+
+## Table of contents
+- [How to use](#how-to-use)
+- [How to install](#how-to-install)
+- [Credits](#credits)
+
+## How to use.
 **Run the examples in the root folder**
 
 ```bash
