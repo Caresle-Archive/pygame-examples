@@ -12,6 +12,10 @@ original_image = pygame.image.load("src/assets/cube.png").convert_alpha()
 
 def main():
 	run = True
+	# The scale values doesn't multiply for the original
+	# image resolution, the scale values resize the image
+	# to the given values.
+	# In this case from a 64x64 image to 128x128 image.
 	scaled_image = pygame.transform.scale(original_image, (128, 128))
 	while run:
 		for event in pygame.event.get():

@@ -16,6 +16,8 @@ rotate_angle = 0
 def main():
 	run = True
 	global rotate_angle
+	# Remember to rotate the original image and not the rotate one
+	# Because could make some pixels looks weird
 	image = pygame.transform.rotate(original_image, rotate_angle)
 	while run:
 		for event in pygame.event.get():

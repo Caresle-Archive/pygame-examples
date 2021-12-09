@@ -27,6 +27,7 @@ def menu_one():
 			if event.type == pygame.KEYDOWN:
 				if event.key == pygame.K_SPACE:
 					print('change to menu two')
+					# We change the current scene and exit the current loop
 					current_scene = "MenuTwo"
 					run = False
 		screen.fill((45, 45, 45))
@@ -50,6 +51,7 @@ def menu_two():
 			if event.type == pygame.KEYDOWN:
 				if event.key == pygame.K_SPACE:
 					print('change to menu one')
+					# We return to the scene one (MenuOne)
 					current_scene = "MenuOne"
 					run = False
 		screen.fill((145, 145, 145))
@@ -61,6 +63,7 @@ def main():
 	run = True
 
 	while run:
+		# We call differents methods for draw the scenes
 		if current_scene == "MenuOne":
 			menu_one()
 		elif current_scene == "MenuTwo":

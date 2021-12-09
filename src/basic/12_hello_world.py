@@ -11,6 +11,7 @@ font = pygame.font.Font("src/assets/KenneyPixelSquare.ttf", 16)
 def main():
 	run = True
 	hello_world_text = font.render("Hello world!", False, (255, 255, 255))
+	# for center the text in the x and y axis
 	text_pos_x = (WIDTH // 2) - (hello_world_text.get_width() // 2)
 	text_pos_y = (HEIGHT // 2) - (hello_world_text.get_height() // 2)
 

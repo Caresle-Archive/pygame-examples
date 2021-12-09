@@ -12,6 +12,7 @@ WIDTH, HEIGHT = 800, 600
 screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Window size")
 
+# The resolutions which will have to choose
 resolutions = [
 	(160, 90),
 	(320, 180),
@@ -35,6 +36,7 @@ def main():
 				if event.key == pygame.K_RIGHT:
 					ind += 1
 					if ind < len(resolutions) - 1:
+						# Change resolution
 						screen = pygame.display.set_mode(resolutions[ind])
 					else:
 						ind = 0
@@ -43,6 +45,7 @@ def main():
 						ind = len(resolutions) - 1
 					else:
 						ind -= 1
+					# Change resolution
 					screen = pygame.display.set_mode(resolutions[ind])
 		screen.fill((130, 130, 255))
 		pygame.display.update()
